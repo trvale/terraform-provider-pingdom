@@ -410,10 +410,18 @@
 [[projects]]
   branch = "master"
   digest = "1:b31877b4429ba22ce944d75f76588e54d474df5cfba9e86d891ad0b8951a36e4"
-  name = "github.com/russellcardullo/go-pingdom"
+  name = "github.com/trvale/go-pingdom"
   packages = ["pingdom"]
   pruneopts = "UT"
   revision = "c0cd353f706f3e31914a293d5a1fe7b07481af66"
+
+[[projects]]
+  digest = "1:145458dae76a303714a4e2b071a71bb0740e8c47400f2209320f3ef9dca11cf0"
+  name = "github.com/trvale/terraform-provider-pingdom"
+  packages = ["pingdom"]
+  pruneopts = "UT"
+  revision = "d9ab54600d3622970d462b50ea5b9b5224171e3d"
+  version = "v0.2.0"
 
 [[projects]]
   digest = "1:db345c377984d0907323c09a9b17f11d995a59649fd38f909727df358b5f9020"
@@ -570,7 +578,8 @@
     "github.com/hashicorp/terraform/plugin",
     "github.com/hashicorp/terraform/terraform",
     "github.com/mitchellh/mapstructure",
-    "github.com/russellcardullo/go-pingdom/pingdom",
+    "github.com/trvale/go-pingdom/pingdom",
+    "github.com/trvale/terraform-provider-pingdom/pingdom",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1
