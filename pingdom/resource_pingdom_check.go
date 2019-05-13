@@ -392,7 +392,8 @@ func checkForResource(d *schema.ResourceData) (pingdom.Check, error) {
 			UserIds:                  checkParams.UserIds,
 			TeamIds:                  checkParams.TeamIds,
 			Port:                     checkParams.Port,
-			StringToSend:             checkParams.StringToSend,
+			Auth:                     checkParams.Auth,
+			Encryption:               checkParams.Encryption,
 			StringToExpect:           checkParams.StringToExpect,
 		}, nil
 	default:
