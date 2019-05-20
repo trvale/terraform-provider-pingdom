@@ -205,6 +205,7 @@ type commonCheckParams struct {
 	ProbeFilters             string
 	StringToSend             string
 	StringToExpect           string
+	Auth                     string
 }
 
 func checkForResource(d *schema.ResourceData) (pingdom.Check, error) {
@@ -319,9 +320,9 @@ func checkForResource(d *schema.ResourceData) (pingdom.Check, error) {
 		checkParams.StringToExpect = v.(string)
 	}
 
-    if v, ok := d.GetOk("auth"); ok {
-        checkParams.Auth = v.(string)
-    }
+	if v, ok := d.GetOk("auth"); ok {
+		checkParams.Auth = v.(string)
+	}
 
 	checkType := d.Get("type")
 	switch checkType {
