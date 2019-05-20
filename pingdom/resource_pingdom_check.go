@@ -6,8 +6,9 @@ import (
 	"strconv"
 	"strings"
 
+	"trvale/go-pingdom/pingdom"
+
 	"github.com/hashicorp/terraform/helper/schema"
-	"github.com/trvale/go-pingdom/pingdom"
 )
 
 func resourcePingdomCheck() *schema.Resource {
@@ -317,6 +318,10 @@ func checkForResource(d *schema.ResourceData) (pingdom.Check, error) {
 	if v, ok := d.GetOk("stringtoexpect"); ok {
 		checkParams.StringToExpect = v.(string)
 	}
+
+    if v, ok := d.GetOk("auth"); ok {
+        checkParams.Auth = v.(string)
+    }
 
 	checkType := d.Get("type")
 	switch checkType {
