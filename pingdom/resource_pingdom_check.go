@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"trvale/go-pingdom/pingdom"
+	"github.com/trvale/go-pingdom/pingdom"
 
 	"github.com/hashicorp/terraform/helper/schema"
 )

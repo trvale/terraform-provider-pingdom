@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"trvale/go-pingdom/pingdom"
+	"github.com/trvale/go-pingdom/pingdom"
 
 	"github.com/hashicorp/terraform/config"
 	"github.com/hashicorp/terraform/helper/schema"
