@@ -539,9 +539,9 @@ func resourcePingdomCheckRead(d *schema.ResourceData, meta interface{}) error {
 	}
 
 	if ck.Type.SMTP != nil {
-		d.Set("port", ck.Type.TCP.Port)
-		d.Set("stringtosend", ck.Type.TCP.StringToSend)
-		d.Set("stringtoexpect", ck.Type.TCP.StringToExpect)
+		d.Set("port", ck.Type.SMTP.Port)
+		d.Set("stringtosend", ck.Type.SMTP.StringToSend)
+		d.Set("stringtoexpect", ck.Type.SMTP.StringToExpect)
 	}
 
 	return nil
