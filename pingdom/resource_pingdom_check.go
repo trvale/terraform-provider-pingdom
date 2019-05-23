@@ -177,6 +177,12 @@ func resourcePingdomCheck() *schema.Resource {
 				Optional: true,
 				ForceNew: false,
 			},
+
+			"auth": {
+				Type:     schema.TypeString,
+				Optional: true,
+				ForceNew: false,
+			},
 		},
 	}
 }
