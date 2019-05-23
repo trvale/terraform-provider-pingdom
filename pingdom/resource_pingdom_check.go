@@ -539,6 +539,7 @@ func resourcePingdomCheckRead(d *schema.ResourceData, meta interface{}) error {
 	}
 
 	if ck.Type.TCP != nil {
+		log.Println("testtesttest")
 		d.Set("port", ck.Type.TCP.Port)
 		d.Set("stringtosend", ck.Type.TCP.StringToSend)
 		d.Set("stringtoexpect", ck.Type.TCP.StringToExpect)
