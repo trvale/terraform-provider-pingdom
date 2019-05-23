@@ -538,18 +538,17 @@ func resourcePingdomCheckRead(d *schema.ResourceData, meta interface{}) error {
 		d.Set("requestheaders", ck.Type.HTTP.RequestHeaders)
 	}
 
-	if ck.Type.TCP != nil {
-		log.Println("testtesttest")
-		d.Set("port", ck.Type.TCP.Port)
-		d.Set("stringtosend", ck.Type.TCP.StringToSend)
-		d.Set("stringtoexpect", ck.Type.TCP.StringToExpect)
-	}
-
 	if ck.Type.SMTP != nil {
 		d.Set("port", ck.Type.SMTP.Port)
 		d.Set("auth", ck.Type.SMTP.Auth)
 		d.Set("encryption", ck.Type.SMTP.Encryption)
 		d.Set("stringtoexpect", ck.Type.SMTP.StringToExpect)
+	}
+
+	if ck.Type.TCP != nil {
+		d.Set("port", ck.Type.TCP.Port)
+		d.Set("stringtosend", ck.Type.TCP.StringToSend)
+		d.Set("stringtoexpect", ck.Type.TCP.StringToExpect)
 	}
 
 	return nil
