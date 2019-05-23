@@ -540,7 +540,8 @@ func resourcePingdomCheckRead(d *schema.ResourceData, meta interface{}) error {
 
 	if ck.Type.SMTP != nil {
 		d.Set("port", ck.Type.SMTP.Port)
-		d.Set("stringtosend", ck.Type.SMTP.StringToSend)
+		d.Set("auth", ck.Type.SMTP.Auth)
+		d.Set("encryption", ck.Type.SMTP.Encryption)
 		d.Set("stringtoexpect", ck.Type.SMTP.StringToExpect)
 	}
 
